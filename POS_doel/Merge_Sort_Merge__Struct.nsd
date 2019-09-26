@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root xmlns:nsd="http://structorizer.fisch.lu/" version="3.26-05" preRepeat="until " postFor="to" preReturn="return" postForIn="in" preWhile="while " output="OUTPUT" input="INPUT" preFor="for" preExit="exit" preLeave="leave" ignoreCase="true" preForIn="foreach" stepFor="by" author="20170050" created="2018-10-19" changedby="20170050" changed="2018-10-19" text="&#34;Merge Sort Merge  Struct&#34;" comment="&#34;merge_sort(int a[], int n);&#34;,&#34;merge(int a[], int n, int m);&#34;" color="ffffff" type="program" style="nice">
+	<children>
+		<call text="&#34;merge_sort&#34;" comment="&#34;Merge Sort funktion&#34;,&#34;int merge_sort(a, n);&#34;" color="ffffff" disabled="0"></call>
+		<alternative text="&#34;  n &#62; 1  &#34;" comment="" color="ffffff" disabled="0">
+			<qTrue>
+				<instruction text="&#34;merge_sort(a, n/2);&#34;" comment="&#34;merge_sort(int a[], int n);&#34;" color="ffffff" rotated="0" disabled="0"></instruction>
+				<instruction text="&#34;merge_sort(a+n/2, n-n/2);&#34;" comment="&#34;merge_sort(int a[], int n);&#34;" color="ffffff" rotated="0" disabled="0"></instruction>
+				<instruction text="&#34;merge(a, n/2, n-n/2);&#34;" comment="&#34;merge(int a[], int n, int m);&#34;" color="ffffff" rotated="0" disabled="0"></instruction>
+			</qTrue>
+			<qFalse color="ffffff">
+			</qFalse>
+		</alternative>
+		<call text="&#34;merge&#34;" comment="&#34;Merge Funktion&#34;,&#34;int merge(int a[], int n, int m);&#34;" color="ffffff" disabled="0"></call>
+		<instruction text="&#34;int x[n], y[m];&#34;" comment="&#34;&#34;" color="ffffff" rotated="0" disabled="0"></instruction>
+		<instruction text="&#34;i = j = 0&#34;" comment="" color="ffffff" rotated="0" disabled="0"></instruction>
+		<while text="&#34;while(i&#60;n &amp;&amp; j&#60;m)&#34;" comment="" color="ffffff" disabled="0">
+			<qWhile>
+				<alternative text="&#34;x[i] &#60; y[j]&#34;" comment="" color="ffffff" disabled="0">
+					<qTrue>
+						<instruction text="&#34;a[i+j] = x[i]&#34;" comment="" color="ffffff" rotated="0" disabled="0"></instruction>
+						<instruction text="&#34;i++&#34;" comment="" color="ffffff" rotated="0" disabled="0"></instruction>
+					</qTrue>
+					<qFalse>
+						<instruction text="&#34;a[i+j] = y[j]&#34;" comment="" color="ffffff" rotated="0" disabled="0"></instruction>
+						<instruction text="&#34;j++&#34;" comment="" color="ffffff" rotated="0" disabled="0"></instruction>
+					</qFalse>
+				</alternative>
+			</qWhile>
+		</while>
+		<instruction text="&#34;memcpy(a+i+j, x+i, (n-i)*sizeof(int));&#34;" comment="&#34;Macht das selbe wie:&#34;,&#34;for(; i&#60;n; i++){&#34;,&#34;   a[i+j] = x[i];&#34;,&#34;}&#34;" color="ffffff" rotated="0" disabled="0"></instruction>
+		<instruction text="&#34;memcpy(a+i+j, y+j, (m-j)*sizeof(int));&#34;" comment="&#34;Macht das selbe wie:&#34;,&#34;for(; j&#60;m; j++){&#34;,&#34;   a[i+j] = y[j];&#34;,&#34;}&#34;" color="ffffff" rotated="0" disabled="0"></instruction>
+	</children>
+</root>

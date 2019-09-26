@@ -1,0 +1,23 @@
+# depslib dependency file v1.0
+1537530844 source:h:\posdoel\alk\main.c
+	<stdio.h>
+	<stdlib.h>
+	<time.h>
+
+1537530844 source:h:\2018_19\pos_doel\main.c
+	<stdio.h>
+	<stdlib.h>
+	<time.h>
+
+1539950574 source:h:\2018_19\pos_doel\merge_sort_merge.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<math.h>
+	<time.h>
+
+1543576680 source:h:\2018_19\pos_doel\quick_sort.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+
